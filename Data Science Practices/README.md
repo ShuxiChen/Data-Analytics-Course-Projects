@@ -1,4 +1,5 @@
 # Course syllabus
+**Most learning materials are excerpted from the "R語言翻轉教室" authored by Wush Wu and adjusted by my professor.**
 
 This course is designed to equip students with a comprehensive understanding of data science, focusing on practical implementation using R. It comprises three main components:
 
