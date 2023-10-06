@@ -4,7 +4,7 @@ The Chi-Square distribution is a probability distribution that arises in statist
 
 ## Basics of the Chi-Square Distribution
 
-The Chi-Square distribution is denoted as χ² (pronounced as "kai-square"). It is a continuous probability distribution that takes only positive values and is right-skewed. The shape of the Chi-Square distribution depends on its degrees of freedom (df).
+The Chi-Square distribution is denoted as χ². It is a continuous probability distribution that takes only positive values and is right-skewed. The shape of the Chi-Square distribution depends on its degrees of freedom (df).
 
 ### Degrees of Freedom (df)
 
