@@ -5,4 +5,4 @@ mining, such as ANOVA, Regression Analysis, Principal Component Analysis, Factor
 Cluster Analysis.
 
 * Each group is required to complete weekly hands-on homework assignments related to statistical concepts and end with final project.
-* Each report from assignment and final project should provide a comprehensive and well-expressed explanation of the statistical results.
+* Report from assignments and final project should provide a comprehensive and well-expressed explanation of the statistical results.
