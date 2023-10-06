@@ -15,7 +15,7 @@ This course aims to apply machine learning techniques to the analysis of marketi
    - Data Visualization
    - Machine Learning Models (including training, evaluation, and optimization)
 
-## Mission
+## Final Project requirements
 
 Each student was required to use open data collected from government house price websites and apply the learned techniques for their final project presentation. While the base dataset was focused on house prices, students had the flexibility to explore various aspects of the data or address specific research questions.
 
