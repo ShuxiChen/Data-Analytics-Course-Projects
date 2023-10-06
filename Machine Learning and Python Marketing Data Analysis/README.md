@@ -17,6 +17,8 @@ This course aims to apply machine learning techniques to the analysis of marketi
 
 ## Final Project requirements
 
-Each student was required to use open data collected from government house price websites and apply the learned techniques for their final project presentation. While the base dataset was focused on house prices, students had the flexibility to explore various aspects of the data or address specific research questions.
+Each student was required to use open data collected from government house price websites and apply the learned techniques for their final project presentation. 
 
-The project outcomes varied from student to student based on their chosen research topics and objectives.
+While the base dataset was focused on house prices, students had the flexibility to explore various aspects of the data or address specific research questions.
+
+So, the project outcomes varied from student to student based on their chosen research topics and objectives.
