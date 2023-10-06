@@ -5,4 +5,4 @@ Complexity theory is also briefly covered.
 
 It covers two homeworks:
 1. Sorting Algorithm Performance Analysis
-2. 
+2. Convex Hull
