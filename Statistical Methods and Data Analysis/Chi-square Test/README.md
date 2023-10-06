@@ -67,10 +67,13 @@ The Chi-Square goodness-of-fit test determines whether the observed frequency di
 
 In Chi-Square tests, data is often organized into a contingency table, also known as a cross-tabulation table. This table displays the observed frequencies of categories for two or more categorical variables.
 
-      | Category A | Category B | Total
-      Group X | a | b | a + b
-      Group Y | c | d | c + d
-      Total | a + c | b + d | a + b + c + d
+          | Category A | Category B | Total
+---------------------------------------------
+Group X   |     a      |     b      | a + b
+Group Y   |     c      |     d      | c + d
+---------------------------------------------
+Total     | a + c      | b + d      | a + b + c + d
+
 
 ## Expected Values (Eij and Ei)
 
