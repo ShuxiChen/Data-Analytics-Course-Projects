@@ -14,6 +14,4 @@ The report for this project should include the following sections:
 
 2. **Graphical Results**: Present the line graphs showing the average time taken by each sorting algorithm for different input sizes.
 
-3. **Discussion**: Analyze the results and provide insights into the performance of each sorting algorithm. Discuss any trends or observations.
-
-4. **Challenges and Solutions**: Describe any difficulties encountered during the project and how they were resolved.
+3. **Challenges and Solutions**: Describe any difficulties encountered during the project and how they were resolved.
