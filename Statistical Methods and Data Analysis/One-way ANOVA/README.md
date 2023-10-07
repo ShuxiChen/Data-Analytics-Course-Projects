@@ -77,7 +77,7 @@ H1: At least one drug has a different mean weight reduction.
 
 **Notes**
 
-The model assumes that the variation comes only from between-sample variation and within-sample variation. It is required that the observations be conducted in a random order, namely the distribution of observations is uniform, indicating this experiment follows CRD.
+The model assumes that the variation comes only from between-sample variation and within-sample variation. It is required that the treatments or experimental conditions are assigned to the observations in a random order, which ensures the distribution of treatments is uniform among the observations, indicating this experiment follows CRD.
 
 **Fixed-effects vs. Random-effects**
 
