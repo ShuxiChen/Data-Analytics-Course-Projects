@@ -49,7 +49,7 @@ e.g., Elections: Examining if the choice of a candidate is independent of the ge
 #### Requirements:
 - Samples must be independent.
 - All variables under consideration must be categorical.
-- The expected frequency (Eij) should be greater than or equal to 5 for all cells in the contingency table.
+- Eij >= 5, otherwise it should apply a correction method(e.g., Yates'correction).
 
 ### 2. Test for Homogeneity
 
@@ -61,7 +61,7 @@ e.g., Market Research: Comparing product preferences among different age groups.
 #### Requirements:
 - Independent random samples from each population.
 - All variables must be categorical.
-- The expected frequency (Eij) should be greater than or equal to 5 for all cells in the contingency table.
+- Eij >= 5, otherwise it should apply a correction method(e.g., Yates'correction).
 
 ### 3. Test of Goodness-of-Fit
 
