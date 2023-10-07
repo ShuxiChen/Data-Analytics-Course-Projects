@@ -14,8 +14,28 @@ The degrees of freedom determine the shape and characteristics of the Chi-Square
   - r is the number of categories or levels in the rows.
   - c is the number of categories or levels in the columns.
 
-- For the Chi-Square goodness-of-fit test, df = (k - 1), where:
-  - k is the number of categories or classes in the observed data.
+- For the Chi-Square goodness-of-fit test, df = (k - 1), where
+  k is the number of categories or classes in the observed data.
+
+## Contingency Table
+
+This table displays the observed frequencies of categories for two or more categorical variables.
+
+|          | Category 1 | Category 2 | ... | Category j | Total |
+|----------|------------|------------|-----|------------|-------|
+| Group 1  | O11        | O12        | ... | O1j        | E1    |
+| Group 2  | O21        | O22        | ... | O2j        | E2    |
+| ...      | ...        | ...        | ... | ...        | ...   |
+| Group i  | Oi1        | Oi2        | ... | Oij        | Ei    |
+| Total    | Ej1        | Ej2        | ... | Ejj        | N     |
+
+- Oij: The observed frequency count in cell (i, j).
+- Eij: The expected frequency count in cell (i, j), assuming independence.
+- Ei: The total expected frequency for row i, calculated as the sum of all expected frequencies in that row.
+- Ej: The total expected frequency for column j, calculated as the sum of all expected frequencies in that column.
+- N: The grand total, which is the sum of all observed frequencies.
+
+  **Eij = (Ei * Ej) / N**
 
 ## Chi-Square Tests
 
@@ -60,26 +80,6 @@ e.g., Random Experiments: Assessing if observed dice rolls match the expected pr
 - Eij for independence and homogeneity tests, Ei for goodness-of-fit tests
 
 - Independence and goodness-of-fit tests are used to examine data from a single sample group, while homogeneity tests are used to test whether the association of a certain variable with different sample groups is consistent. 
-
-## Contingency Table
-
-This table displays the observed frequencies of categories for two or more categorical variables.
-
-|          | Category 1 | Category 2 | ... | Category j | Total |
-|----------|------------|------------|-----|------------|-------|
-| Group 1  | O11        | O12        | ... | O1j        | E1    |
-| Group 2  | O21        | O22        | ... | O2j        | E2    |
-| ...      | ...        | ...        | ... | ...        | ...   |
-| Group i  | Oi1        | Oi2        | ... | Oij        | Ei    |
-| Total    | Ej1        | Ej2        | ... | Ejj        | N     |
-
-- Oij: The observed frequency count in cell (i, j).
-- Eij: The expected frequency count in cell (i, j), assuming independence.
-- Ei: The total expected frequency for row i, calculated as the sum of all expected frequencies in that row.
-- Ej: The total expected frequency for column j, calculated as the sum of all expected frequencies in that column.
-- N: The grand total, which is the sum of all observed frequencies.
-
-  **Eij = (Ei * Ej) / N**
 
 ## Interpretation of Results
 
