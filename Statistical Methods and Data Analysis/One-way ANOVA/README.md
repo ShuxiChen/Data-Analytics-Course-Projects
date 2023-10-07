@@ -12,8 +12,8 @@ ANOVA is more robust by considering the overall pattern of group means.
 
 #### Assumptions
 
-1. Normality: Observations are normally distrubuted.
-2. Independence: observations are independent
+1. Normality: observations are normally distrubuted.
+2. Independence: observations are independent.
 3. Equal variances: same variance for each treatment or factor level.
 
 #### Termonologies
@@ -38,8 +38,6 @@ ANOVA is more robust by considering the overall pattern of group means.
 #### Analysis
 
 #### Conclusion
-
-### RCBD (Completely Randomized Single-Factor Experiment)
 
 ## One-Way ANOVA (Single-Factor ANOVA)
 
