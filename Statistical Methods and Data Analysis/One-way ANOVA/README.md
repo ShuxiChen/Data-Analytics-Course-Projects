@@ -18,7 +18,11 @@ ANOVA is more robust by considering the overall pattern of group means.
 
 #### Termonologies
 
-* 
+* Response/Dependent variable
+* Factor/Independent variable
+* Levels
+* Treatment
+* Experimental units
 
 #### Two sources of variability
 
@@ -35,16 +39,27 @@ There are four drugs to reduce weight. Sampling 12 observations to conduct an **
 
 #### Hypothesis
 
+H0: The mean weight reduction of all four drugs is equal.
+
+H1: At least one drug has a different mean weight reduction.
+
 #### Experiment
 
-Randomly sample 12 people to experiment.
+* Randomly select 12 participants for the experiment.
+* Each participant was assigned to one of the four drug groups randomly.
 
 <img width="372" alt="Screenshot 2023-10-07 at 10 14 08 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/19f7a702-c01d-455b-846b-c4c2846bf0a0">
 
 
 #### Analysis
 
+* Perform two-way ANOVA.
+* Examine mean differences.
+
 #### Conclusion
+
+* If reject H0, it suggests that there are statistically significant differences in the mean weight reduction among the drug groups.
+* By random assignment of participants to drug groups, the effect of any nuisance variable that influence the observed  is approximation balanced out.
 
 ## One-Way ANOVA (Single-Factor ANOVA)
 
