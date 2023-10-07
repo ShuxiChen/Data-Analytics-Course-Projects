@@ -1,4 +1,4 @@
-# ANOVA analysis
+# ANOVA analysis(1)
 
 To determine whether or not the factor affects the response and treatment means varies among different samples.
 
@@ -9,6 +9,12 @@ e.g., A farmer wants to determine if the yields of a crop differ when the soil i
 When conducting multiple t-tests, the more comparisons you make, the more likely to find some statistically significant results just by chance (Type I errors). 
 
 ANOVA is more robust by considering the overall pattern of group means.
+
+#### Assumptions
+
+1. Normality: Observations are normally distrubuted.
+2. Independence: observations are independent
+3. Equal variances: same variance for each treatment or factor level.
 
 #### Termonologies
 
@@ -160,5 +166,16 @@ H1: μi ≠ μj (i ≠ j)
 
 * If <img width="72" alt="Screenshot 2023-10-07 at 8 50 49 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/3a0ebccc-cfd3-4232-a100-4a182b94ba9f">> 0, it would reject H0, indicating that there is no difference in mean response at two particular levels.
 
-## Residual Analysis and Model Checking
+## Residual Analysis
 
+Check the three assumptions by examining the residuals.
+
+For the CRD, <img width="147" alt="Screenshot 2023-10-07 at 9 20 10 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/39d200d9-265e-4e65-bbd2-f90184d4b7cf">, and each residual is <img width="255" alt="Screenshot 2023-10-07 at 9 15 02 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/460dc878-3bb1-43eb-a218-6f408c55c5da">
+
+**1. Normality Check:** normal probability plot of the residuals
+
+**2. Equal Variances Check:**
+   1) plot the residuals against the factor levels and compare the spread in the residuals
+   2) plot the residuals against<img width="44" alt="Screenshot 2023-10-07 at 9 18 01 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/f8e3811f-534e-4dcb-a035-a43d0b154811">
+
+**3. Independence Check:** plot the residuals against the time or run order in which the experiment was performed
