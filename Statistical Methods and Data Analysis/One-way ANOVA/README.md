@@ -123,7 +123,7 @@ F = MSTr/MSE
 
 - MSTr tends to overestimate the population variance σ^2.
 
-#### Interpretation of Results
+#### Decision Rules
 
 1. F statistics method
    
