@@ -31,7 +31,7 @@ ANOVA is more robust by considering the overall pattern of group means.
 
 #### Scenario
 
-There are four drugs to reduce weight.
+There are four drugs to reduce weight. Conduct an experiment with 3 observations be taken under each treatment.
 
 #### Hypothesis
 
