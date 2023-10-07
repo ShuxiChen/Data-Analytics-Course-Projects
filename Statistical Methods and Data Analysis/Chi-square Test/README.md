@@ -1,4 +1,4 @@
-# Chi-Square Distribution
+# Chi-Square Statistics
 
 ## Chi-Square Distribution
 
