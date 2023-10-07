@@ -58,7 +58,7 @@ The test investigates whether the proportions in the different categories are th
 
 e.g., Assess whether the preference for different types of beverages (coffee, tea, soda) is homogeneous across different age groups (young adults, middle-aged, and elderly).
 
-#### Hypothesis
+#### Hypotheses
 
 The null hypothesis of homogeneity states that the proportion of individuals in category j is the same for each population and that this is true for every category.
 
@@ -106,7 +106,7 @@ The test investigates whether the categories of the two factors occur independen
 
 e.g., Assess the relationship between brands preferences and consumer demographics (e.g., age, gender) to inform marketing strategies.
 
-#### Hypothesis
+#### Hypotheses
 
 H0 : the row-and-column factors of classification are independent.
 
