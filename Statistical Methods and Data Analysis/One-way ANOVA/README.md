@@ -52,7 +52,7 @@ H1: At least one drug has a different mean weight reduction.
 
 #### Analysis
 
-* Perform two-way ANOVA.
+* Perform owo-way ANOVA.
 * Examine mean differences.
 
 #### Conclusion
