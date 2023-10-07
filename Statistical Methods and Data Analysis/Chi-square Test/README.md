@@ -1,88 +1,136 @@
 # Chi-Square Distribution
 
-Chi-square test is used to examine whether there is significant association or relationship between two categorical variables.
+## Chi-Square Distribution
 
-## Basics of the Chi-Square Distribution
-
-The Chi-Square distribution is denoted as χ². It is a continuous probability distribution that takes only positive values and is right-skewed. The shape of the Chi-Square distribution depends on its degrees of freedom (df).
-
-### Degrees of Freedom (df)
-
-The degrees of freedom determine the shape and characteristics of the Chi-Square distribution. In statistical terms, degrees of freedom represent the number of values in the final calculation of a statistic that are free to vary.
-
-- For Chi-Square tests of independence and homogeneity, df = (r - 1)(c - 1), where:
-  - r is the number of categories or levels in the rows.
-  - c is the number of categories or levels in the columns.
-
-- For the Chi-Square goodness-of-fit test, df = (k - 1), where
-  k is the number of categories or classes in the observed data.
-
-## Contingency Table
-
-This table displays the observed frequencies of categories for two or more categorical variables.
-
-|          | Category 1 | Category 2 | ... | Category j | Total |
-|----------|------------|------------|-----|------------|-------|
-| Group 1  | O11        | O12        | ... | O1j        | E1    |
-| Group 2  | O21        | O22        | ... | O2j        | E2    |
-| ...      | ...        | ...        | ... | ...        | ...   |
-| Group i  | Oi1        | Oi2        | ... | Oij        | Ei    |
-| Total    | Ej1        | Ej2        | ... | Ejj        | N     |
-
-- Oij: The observed frequency count in cell (i, j).
-- Eij: The expected frequency count in cell (i, j), assuming independence.
-- Ei: The total expected frequency for row i, calculated as the sum of all expected frequencies in that row.
-- Ej: The total expected frequency for column j, calculated as the sum of all expected frequencies in that column.
-- N: The grand total, which is the sum of all observed frequencies.
-
-  **Eij = (Ei * Ej) / N**
+Denoted as χ²,it is a continuous probability distribution that takes only positive values and is right-skewed. The shape of the Chi-Square distribution depends on its degrees of freedom (df).
 
 ## Chi-Square Tests
 
-### 1. Test of Independence
+### 1. Test of Goodness-of-Fit
 
-#### Purpose:
-The test assesses whether there is a significant association between categorical variables. It helps determine if the occurrence of one categorical variable is related to the occurrence of another categorical variable.
+#### Purpose
 
-e.g., Elections: Examining if the choice of a candidate is independent of the gender of voters.
-
-#### Requirements:
-- Samples must be independent.
-- All variables under consideration must be categorical.
-- Eij >= 5, otherwise it should apply a correction method(e.g., Yates'correction).
-
-### 2. Test for Homogeneity
-
-#### Purpose:
-The test is used when comparing the distribution of a categorical variable among multiple populations or groups. It assesses whether these populations exhibit the same categorical data distribution.
-
-e.g., Market Research: Comparing product preferences among different age groups.
-
-#### Requirements:
-- Independent random samples from each population.
-- All variables must be categorical.
-- Eij >= 5, otherwise it should apply a correction method(e.g., Yates'correction).
-
-### 3. Test of Goodness-of-Fit
-
-#### Purpose:
 The test determines whether the observed frequency distribution of categorical data fits a theoretical (expected) frequency distribution. It evaluates how well the observed data matches the expected distribution.
 
-e.g., Random Experiments: Assessing if observed dice rolls match the expected probabilities.
+e.g., Discrete distribution: Assess if the number of defect in printed circuit boards follow a Poisson distribution.
 
-#### Requirements:
-- A sample of observed data.
-- A theoretical distribution to compare against.
-- The expected frequency (Ei) should be greater than or equal to 5 for all categories.
+e.g., Continuous distribution: Determine whether output voltage follow a normal distribution.
 
-### Comparison of three tests:
+#### Hypotheses
+
+H0 : The data comes from a particular distribution.
+
+H1 : The data doesn’t comes from a particular distribution.
+
+#### Test statistic
+
+Ei = n*pi
+
+**df = k-p-1**
+- p = the number of parameters of the hypothesized distribution
+estimated by sample statistics.
+
+<img width="573" alt="Screenshot 2023-10-07 at 11 27 03 AM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/226dce02-a732-4e9f-bffd-e1f0414e5584">
+
+#### Notes
+- Ei >= 5, otherwise it is better to combine with the adjacent class interval.
+- Continuous values(e.g., Normal Distribution) can be grouped into intervals or classes; class intervals are not required to be of equal width.
+
+### 2. Testing for homogeneity (Contingency table tests)
+
+**Type 1 contingency table:**
+
+There are **I** populations of interest, each corresponding to a different row of the table, and each population is divided into the same **J** categories.
+
+|       | Category 1 | Category 2 | ... | Category j | Total |
+|-------|------------|------------|-----|------------|-------|
+|   1   |    O11     |    O12     | ... |    O1j     |  O1.  |
+|   2   |    O21     |    O22     | ... |    O2j     |  O2.  |
+|  ...  |    ...     | ...        | ... | ...        | ...   |
+|   i   |    O11     |    Oi2     | ... |    Oij     |  Oi.  |
+| Total |    O.1     |    O.2     | ... |    O.j     |   n   |
+
+- Pij = the proportion of the individuals inpopulation i who fall into category j.
+
+#### Purpose
+
+The test investigates whether the proportions in the different categories are the same for all populations.
+
+e.g., Assess whether the preference for different types of beverages (coffee, tea, soda) is homogeneous across different age groups (young adults, middle-aged, and elderly).
+
+#### Hypothesis
+
+The null hypothesis of homogeneity states that the proportion of individuals in category j is the same for each population and that this is true for every category.
+
+H0: p1j = p2j = ... = pij, j = 1,2,...,J(c)
+
+H1: H0 is not true
+
+#### Test statistic
+
+Eij = estimated expected count in cell(i,j) 
+
+    = Oi.*(O.j/n) 
+    
+    = (ith row total)(jth column total)/n
+
+**df = (I-1)*(J-1)**
+
+<img width="568" alt="Screenshot 2023-10-07 at 1 00 36 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/67b40b1b-cc63-4626-865f-72717455d423">
+
+#### Notes
+- Eij >= 5, otherwise it is better to apply a correction method like Yates' correction.
+
+### 3. Testing for independence (Contingency table tests)
+
+Type 2 contingency table:
+
+There is single population of interest, with each individual in the population categorized with respect to two different factors. There are **I** categories associated with the first factor and **J** categories associated with the second factor. 
+                  
+
+| Factor A/B | Category 1 | Category 2 | ... | Category j | Total |
+|------------|------------|------------|-----|------------|-------|
+| Category 1 |    O11     |    O12     | ... |    O1j     |  O1.  |
+| Category 2 |    O21     |    O22     | ... |    O2j     |  O2.  |
+|    ...     |    ...     | ...        | ... | ...        | ...   |
+| Category i |    Oi1     |    Oi2     | ... |    Oij     |  Oi.  |
+|   Total    |    O.1     |    O.2     | ... |    O.j     |   n   |
+
+- pij = the probability that a randomly selected element falls in the ijth cells.
+- ui = the probability that a randomly selected element falls in row class i.
+- vj = the probability that a randomly selected element falls in column class j.
+
+#### Purpose
+
+The test investigates whether the categories of the two factors occur independently of one another in the population.
+
+e.g., Assess the relationship between brands preferences and consumer demographics (e.g., age, gender) to inform marketing strategies.
+
+#### Hypothesis
+
+H0 : the row-and-column factors of classification are independent.
+
+H1 : the row-and-column factors of classification are not independent.
+(There is some interaction between the two criteria of classification)
+
+#### Test statistic
+
+<img width="477" alt="Screenshot 2023-10-07 at 1 45 24 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/59a55ce2-1d0b-48ae-8d52-9bbaa03df456">
+
+**df = (I-1)*(J-1)**
+
+for large n, <img width="187" alt="Screenshot 2023-10-07 at 1 46 05 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/585bab95-81a2-499e-a336-4f85057f3849">
+
+### Interpretation of Results
+
+- If χ² > critical value, it suggests a significant difference between observed and expected data, H0 is rejected.
+  
+- If χ² < critical value, there is no significant difference, and H0 is not rejected.
+
+### Summary of three tests:
 
 - Eij for independence and homogeneity tests, Ei for goodness-of-fit tests
 
-- Independence and goodness-of-fit tests are used to examine data from a single sample group, while homogeneity tests are used to test whether the association of a certain variable with different sample groups is consistent. 
+- For tests of independence and homogeneity, df = (I - 1)(J - 1)
 
-## Interpretation of Results
-
-- If χ² > critical value, it suggests a significant difference between observed and expected data.
-This leads to the rejection of the null hypothesis (H₀).
-- If χ² < critical value, there is no significant difference, and H₀ is not rejected.
+  For the goodness-of-fit test, df = (k - 1)
