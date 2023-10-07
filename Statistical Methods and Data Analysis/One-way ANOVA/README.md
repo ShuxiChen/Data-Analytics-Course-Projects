@@ -39,6 +39,9 @@ There are four drugs to reduce weight. Sampling 12 observations to conduct an **
 
 Randomly sample 12 people to experiment.
 
+<img width="372" alt="Screenshot 2023-10-07 at 10 14 08 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/19f7a702-c01d-455b-846b-c4c2846bf0a0">
+
+
 #### Analysis
 
 #### Conclusion
