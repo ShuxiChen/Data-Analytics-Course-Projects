@@ -1,6 +1,6 @@
 # ANOVA analysis(2)
 
-This is the continued ANOVA content of ANOVA analysis(2) in One-way ANOVA. 
+This is the continued ANOVA content of ANOVA analysis(1) in One-way ANOVA. 
 
 ## Designing Engineering Experiments
 
@@ -12,6 +12,8 @@ This is the continued ANOVA content of ANOVA analysis(2) in One-way ANOVA.
 * nuisance factor: the factor we are not interested, probably has an effect on the response.
 * blocking: a technique addressing the nuisance source of variability when it **is known and controllable**.
 * blocks: homogeneous groupings of experimental units created after blocking.
+
+Blocking reduces experimental errors, because the units in blocks have characteristics that are more common than units that are in different blocks.
 
 #### Scenario
 
@@ -41,20 +43,23 @@ H1: At least one drug has a different mean weight reduction.
 * If reject H0, it suggests that there are statistically significant differences in the mean weight reduction among the drug groups.
 * Blocking by age eliminates age-related confounds for more accurate conclusions.
 
-## Two-Way ANOVA (Single-Factor ANOVA)
+## Two-Way ANOVA
 
 #### Purposes
 
-- Analyze data sampled from more than two numerical populations.
-- Analyze data sampled from experiments where more than two treatments have been used.
+- Analyze data with two categorical factors (Factor A and Factor B).
+- Assess main effects of each factor on a continuous variable.
+- Detect interaction effects between Factor A and Factor B.
 
 #### Data stucture
 
-<img width="645" alt="Screenshot 2023-10-07 at 4 01 04 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/65e430ba-5e99-4dfc-972f-17a83dc1f9c5">
+<img width="362" alt="Screenshot 2023-10-07 at 11 08 52 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/15421735-16de-498a-a34c-fb756bd2a1c4">
+
+<img width="600" alt="Screenshot 2023-10-07 at 11 06 21 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/a53063cc-2d8c-4a36-a48f-e172ddf7110d">
 
 #### Linear Model
 
-<img width="583" alt="Screenshot 2023-10-07 at 4 02 00 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/277494e7-1404-4433-a7ae-98d7c6f203f9">
+<img width="537" alt="Screenshot 2023-10-07 at 11 08 35 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/1ad5008c-8517-43fa-a87b-0eaafe289467">
 
 **Notes**
 
