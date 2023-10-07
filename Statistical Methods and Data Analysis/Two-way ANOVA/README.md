@@ -4,17 +4,42 @@ This is the continued ANOVA content of ANOVA analysis(2) in One-way ANOVA.
 
 ## Designing Engineering Experiments
 
-### RCBD (Completely Randomized Single-Factor Experiment)
+### RCBD (Randomized Complete Block Design)
+
+#### Terminology
+
+* interest factor: the factor we are interested to experiment.
+* nuisance factor: the factor we are not interested, probably has an effect on the response.
+* blocking: a technique addressing the nuisance source of variability when it **is known and controllable**.
+* blocks: homogeneous groupings of experimental units created after blocking.
 
 #### Scenario
 
+There are four drugs to reduce weight. Sampling 12 observations to conduct an balanced experiment.
+
 #### Hypothesis
+
+H0: The mean weight reduction of all four drugs is equal.
+
+H1: At least one drug has a different mean weight reduction.
 
 #### Experiment
 
+* Since the variation of age is sensitivity of detecting drugs differences, consider age as a known and controllable nuisance factor.
+* Divide participants into 3 blocks Old, Middle, and Young age groups.
+* Four participants from each age group are randomly assigned to each drug.
+
+<img width="325" alt="Screenshot 2023-10-07 at 10 14 35 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/40fdaae3-5281-4625-8d59-9ae1d236e6ff">
+
 #### Analysis
 
+* Perform two-way ANOVA.
+* Examine drug **main effects** and **interactions** with age.
+
 #### Conclusion
+
+* If reject H0, it suggests that there are statistically significant differences in the mean weight reduction among the drug groups.
+* Blocking by age eliminates age-related confounds for more accurate conclusions.
 
 ## Two-Way ANOVA (Single-Factor ANOVA)
 
