@@ -23,7 +23,7 @@ ANOVA is more robust by considering the overall pattern of group means.
 
 ### CRD (Completely Randomized Single-Factor Experiment)
 
-#### Senario
+#### Scenario
 
 #### Hypothesis
 
@@ -52,7 +52,7 @@ ANOVA is more robust by considering the overall pattern of group means.
 
 **Notes**
 
-We hope the variation only comes from within-sample variation and between sample variation, it is required the observations are conducted under random order, namely the distribution of observations is uniform, indicating this experiment follows CRD.
+The model assumes that the variation comes only from between-sample variation and within-sample variation. It is required that the observations be conducted in a random order, namely the distribution of observations is uniform, indicating this experiment follows CRD.
 
 ### Hypotheses
 
