@@ -54,29 +54,111 @@ ANOVA is more robust by considering the overall pattern of group means.
 
 The model assumes that the variation comes only from between-sample variation and within-sample variation. It is required that the observations be conducted in a random order, namely the distribution of observations is uniform, indicating this experiment follows CRD.
 
-### Hypotheses
+**Fixed-effects vs. Random-effects**
 
-- **Null Hypothesis (H0):** There are no statistically significant differences between the group means, implying that all group means are equal.
-- **Alternative Hypothesis (Ha):** At least one group mean is statistically different from the others, indicating a significant difference among group means.
+Fixed-effects model:
 
-### Test Statistic
+The experiment intentionally includes y levels from a factor with x levels, and the conclusions can not be generalized to other treatments that were not included. 
 
-- The test statistic used in ANOVA follows the F-distribution.
+- the summation of treadtment effects (τi) across all levels of the factor = 0
 
-### Assumptions
+Random-effects model:
 
-- The data within each group should follow a normal distribution.
-- Homogeneity of variances: Variances within each group should be approximately equal.
-- Independence of observations: Data points in one group should not be dependent on data points in other groups.
+The experiment randomly selects y levels from a factor with x levels, and the conclusions can be extended to all treatments, whether or not they were included. 
 
-### Steps
+- the treatment effects (τi) are variables
 
-1. Collect data from each group.
-2. Calculate the group means and the overall mean.
-3. Compute the variance between groups (explained variance) and within groups (unexplained variance).
-4. Calculate the F-statistic, which represents the ratio of explained variance to unexplained variance.
-5. Compare the F-statistic to a critical value from the F-distribution.
-6. If the F-statistic exceeds the critical value, reject the null hypothesis, signifying a significant difference in at least one group mean.
-7. Perform post hoc tests (e.g., Tukey's HSD) to identify specific groups with significantly different means.
+#### Hypotheses
 
-One-Way ANOVA finds widespread application across various fields, including medicine, psychology, and business, to compare means across multiple groups. It aids researchers in determining whether significant differences exist among treatments, conditions, or categories.
+1. H0: μ1 = μ2 = ... = μa vs. H1: At least two of the μi's are different
+
+   or
+
+2. H0: τ1 = τ2 = ... = τa = 0 vs. H1: At least one of the τi's is different from zero 
+
+#### Test Statistic
+
+<img width="466" alt="Screenshot 2023-10-07 at 7 20 24 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/06fa3ac2-3e36-44d7-bc52-3fe0f93606bc">
+
+<img width="384" alt="Screenshot 2023-10-07 at 7 28 51 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/97bbf7df-31ae-4ac3-8391-66bb02b50366">
+
+F = MSTr/MSE
+
+#### ANOVA table
+
+<img width="627" alt="Screenshot 2023-10-07 at 7 38 10 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/7a7965bf-15dd-47cd-8ec7-af1383087759">
+
+**Notes**
+
+<img width="434" alt="Screenshot 2023-10-07 at 7 43 14 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/44ebda36-2128-46f9-9015-a09eea2a8cac">
+
+- Both statistics are unbiased for estimating the population variance σ^2.
+
+<img width="472" alt="Screenshot 2023-10-07 at 7 45 07 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/25184aee-078d-411a-8cbb-b5db4928ecb4">
+
+- MSTr tends to overestimate the population variance σ^2.
+
+#### Interpretation of Results
+
+1. F statistics method
+   
+2. P-value method
+   
+3. Confidence interval estimate method
+
+   1) on a treatment mean
+    
+      <img width="586" alt="Screenshot 2023-10-07 at 7 59 16 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/23f82621-4c8f-49ce-a7fc-f45ef3f91c6c">
+
+
+   2) on a difference in treatment means
+
+      <img width="579" alt="Screenshot 2023-10-07 at 7 59 30 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/b4ad8af2-6166-4230-86da-2c3513a0604f">
+
+* If the CI include zero, it would fail to reject H0, indicating that there is no difference in mean response at two particular levels.
+  
+* If the CI NOT include zero, it would reject H0, indicating that there is no difference in mean response at two particular levels.
+
+### Unbalanced Experiment
+
+The number of observation taken under treatment are different.
+
+<img width="611" alt="Screenshot 2023-10-07 at 8 01 24 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/8438facd-fa48-4e41-823e-c7dbe2979a1a">
+
+## Multiple Comparisons
+
+ANOVA doesn't identify which means are different. Multiple comparison helps determine which pairwise comparisons are statistically significant. 
+
+### Fisher’s least significant difference (LSD)
+
+This method compares all pairs of means.
+
+#### Hypotheses
+
+H0: μi = μj (i ≠ j)
+
+H1: μi ≠ μj (i ≠ j)
+
+#### Test Statistic
+
+1. Balanced experiment
+   
+<img width="264" alt="Screenshot 2023-10-07 at 8 42 14 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/d6d440fb-afed-4837-8892-e4a186698b46">
+
+<img width="352" alt="Screenshot 2023-10-07 at 8 44 25 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/9ec0c062-3027-4f95-bf19-489c82fe17ed">
+
+2. Unbalanced experiment
+   
+<img width="264" alt="Screenshot 2023-10-07 at 8 42 14 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/d6d440fb-afed-4837-8892-e4a186698b46">
+
+<img width="423" alt="Screenshot 2023-10-07 at 8 44 42 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/5cbad9b9-3566-4292-9b20-93caba410862">
+
+#### Interpretation of Results
+
+* If <img width="72" alt="Screenshot 2023-10-07 at 8 50 49 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/3a0ebccc-cfd3-4232-a100-4a182b94ba9f">< 0, it would fail to reject H0, indicating that there is no difference in mean response at two particular levels.
+  
+
+* If <img width="72" alt="Screenshot 2023-10-07 at 8 50 49 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/3a0ebccc-cfd3-4232-a100-4a182b94ba9f">> 0, it would reject H0, indicating that there is no difference in mean response at two particular levels.
+
+## Residual Analysis and Model Checking
+
