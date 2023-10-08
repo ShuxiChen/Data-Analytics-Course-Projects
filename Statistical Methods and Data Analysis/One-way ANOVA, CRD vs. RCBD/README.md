@@ -186,6 +186,10 @@ H1: μi ≠ μj (i ≠ j)
 
 * If <img width="72" alt="Screenshot 2023-10-07 at 8 50 49 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/3a0ebccc-cfd3-4232-a100-4a182b94ba9f">> 0, it would reject H0, indicating that there is no difference in mean response at two particular levels.
 
+#### Other methods
+
+Degree of strictness in testing: Scheffe > Bonferroni > Tukey > Fisher's LSD
+
 ## Residual Analysis
 
 Check the three assumptions by examining the residuals.
