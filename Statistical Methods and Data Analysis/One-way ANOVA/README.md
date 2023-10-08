@@ -23,6 +23,7 @@ ANOVA is more robust by considering the overall pattern of group means.
 * Levels
 * Treatment
 * Experimental units
+* A balanced design is said to be if all the treatment groups have the same number of replicates. Otherwise, the design is unbalanced.
 
 #### Two sources of variability
 
