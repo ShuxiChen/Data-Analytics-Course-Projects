@@ -18,12 +18,12 @@ ANOVA is more robust by considering the overall pattern of group means.
 
 #### Termonologies
 
-* Response/Dependent variable
-* Factor/Independent variable
-* Levels
-* Treatment
-* Experimental units
-* A balanced design is said to be if all the treatment groups have the same number of replicates. Otherwise, the design is unbalanced.
+* Response/Dependent variable: target value
+* Factor/Independent variable: the variable affects the response
+* Levels: the different categories within a factor
+* Treatment: the various classifications (in two-way represents a unique combination of factor levels)
+* Experimental units: the observations
+* Replicates: the number of observations in a treatment
 
 #### Two sources of variability
 
@@ -192,13 +192,15 @@ Check the three assumptions by examining the residuals.
 
 For the CRD, <img width="147" alt="Screenshot 2023-10-07 at 9 20 10 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/39d200d9-265e-4e65-bbd2-f90184d4b7cf">, and each residual is <img width="255" alt="Screenshot 2023-10-07 at 9 15 02 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/460dc878-3bb1-43eb-a218-6f408c55c5da">
 
-**1. Normality Check:** normal probability plot of the residuals
+**1. Normality Check:** 
+   - normal probability plot of the residuals
 
 **2. Equal Variances Check:**
-   1) plot the residuals against the factor levels and compare the spread in the residuals
-   2) plot the residuals against<img width="44" alt="Screenshot 2023-10-07 at 9 18 01 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/f8e3811f-534e-4dcb-a035-a43d0b154811">
+   - plot the residuals against the factor levels and compare the spread in the residuals
+   - plot the residuals against<img width="44" alt="Screenshot 2023-10-07 at 9 18 01 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/f8e3811f-534e-4dcb-a035-a43d0b154811">
 
-**3. Independence Check:** plot the residuals against the time or run order in which the experiment was performed
+**3. Independence Check:** 
+   - plot the residuals against the time or run order in which the experiment was performed
 
 ## Designing Engineering Experiments(2)
 
@@ -324,14 +326,15 @@ Check the three assumptions by examining the residuals.
 For the RCBD, <img width="152" alt="Screenshot 2023-10-08 at 2 10 24 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/c67fb20b-6c7b-4b76-92df-5bcf1d858e82">, and each residual is <img width="213" alt="Screenshot 2023-10-08 at 2 11 08 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/41054d84-63a2-448f-b8d9-cc2029ebb853">
 
 
-**1. Normality Check:** normal probability plot of the residuals
+**1. Normality Check:** 
+   - normal probability plot of the residuals
 
 **2. Equal Variances Check:**
-   1) plot residuals by treatment
-   2) plot residuals vs. fitted value(<img width="24" alt="Screenshot 2023-10-08 at 2 26 50 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/c79683b6-f0e5-4141-b231-336c1c8c8c31">)
+   - plot residuals by treatment
+   - plot residuals vs. fitted value(<img width="24" alt="Screenshot 2023-10-08 at 2 26 50 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/c79683b6-f0e5-4141-b231-336c1c8c8c31">)
 
 
 **3. Independence Check:** 
-   1) plot residuals by block
-   2) plot residuals vs. time
-   3) plot residuals vs. run order
+   - plot residuals by block
+   - plot residuals vs. time
+   - plot residuals vs. run order
