@@ -34,7 +34,11 @@ This is the simplest type of factorial experiment, Analyzing data with two categ
 
 #### Linear Model
 
-#### Statistic
+<img width="640" alt="Screenshot 2023-10-08 at 4 44 59 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/d1187314-e0c8-43d0-b5f1-e70296330887">
+
+**Notes**
+
+This model assumes that the variation comes from between-sample variation, within-sample variation, and the effect of the block (nuisance factor).
 
 #### Hypotheses
 
@@ -86,20 +90,22 @@ Conduct the test for interaction fisrt:
 
 ## Multiple Comparisons
 
-When the is no interaction, Fisher's LSD method can be used to identify significant differences in levels.
+When there is no interaction effect, Fisher's LSD method can be used to identify significant differences in levels.
 
 ## Residual Analysis
 
-For two-factor model, <img width="156" alt="Screenshot 2023-10-08 at 7 59 37 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/d37f2765-bf00-438b-a6e5-c523ed1e0710">
+For two-factor model, <img width="120" alt="Screenshot 2023-10-08 at 7 59 37 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/d37f2765-bf00-438b-a6e5-c523ed1e0710">
 
 **1. Normality Check:** 
    - normal probability plot of the residuals
 
 **2. Equal Variances Check:**
-   - plot residuals vs. fitted value(<img width="20" alt="Screenshot 2023-10-08 at 8 14 39 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/76387170-35d0-43c4-bb97-f0ea975e004e">). If standardized residuals > 2, it could likely be outliers.
-   - Plot of residuals versus Factor A
-   - Plot of residuals versus Factor B
+   - plot residuals() vs. fitted value(<img width="20" alt="Screenshot 2023-10-08 at 8 14 39 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/76387170-35d0-43c4-bb97-f0ea975e004e">).
 
+(plot of standardized residuals vs. fitted value can identify outliers if > 2)
+
+   - plot residuals vs. Factor A
+   - plot residuals vs. Factor B
 
 **3. Independence Check:** 
    - plot residuals vs. time
@@ -107,3 +113,8 @@ For two-factor model, <img width="156" alt="Screenshot 2023-10-08 at 7 59 37 PM"
 
 ### One Observation per Cell
 
+If there is only one replicate per cell, it will have no error degrees of freedom, making it impossible to conduct hypothesis tests.
+
+To address this challenge, one method is to **assume the interaction effect is negligible and use the interaction mean square as an error mean square**, which is equivalent to RCBD analysis.
+
+This no-interaction assumption can be dangerous.
