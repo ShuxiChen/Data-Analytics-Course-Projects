@@ -68,7 +68,7 @@ H1: At least one drug has a different mean weight reduction.
 - Analyze data sampled from more than two numerical populations.
 - Analyze data sampled from experiments where more than two treatments have been used.
 
-#### Data stucture
+#### Data arrangement
 
 <img width="645" alt="Screenshot 2023-10-07 at 4 01 04 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/65e430ba-5e99-4dfc-972f-17a83dc1f9c5">
 
@@ -251,7 +251,7 @@ H1: At least one drug has a different mean weight reduction.
 
 --------------------
 
-#### Data stucture
+#### Data arrangement
 
 <img width="362" alt="Screenshot 2023-10-07 at 11 08 52 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/15421735-16de-498a-a34c-fb756bd2a1c4">
 
