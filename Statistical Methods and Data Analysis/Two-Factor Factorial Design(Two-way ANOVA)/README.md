@@ -24,7 +24,7 @@ Used in experiments with several interested factors.
 
 A significant interaction can mask the significance of main effects. Consequently, when interaction is present, the main effects of the factors involved in the interaction may not have much meaning.
 
-## Two-Way ANOVA(No Interaction Effect)
+## Two-Factor Factorial Experiments (Two-Way ANOVA)
 
 This is the simplest type of factorial experiment, Analyzing data with two categorical factors(Factor A and Factor B).
 
@@ -57,4 +57,53 @@ This is the simplest type of factorial experiment, Analyzing data with two categ
   H1AB: At least one of the (τβ)ij's is not equal to zero.
 
 #### Test Statistic
+
+<img width="602" alt="Screenshot 2023-10-08 at 7 05 13 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/0606568d-0f79-4a48-8b9a-77888c94f3c5">
+
+<img width="673" alt="Screenshot 2023-10-08 at 7 05 45 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/b4da6aeb-c103-4fb1-ba2a-0f544b7bd699">
+
+#### ANOVA table
+
+<img width="699" alt="Screenshot 2023-10-08 at 7 32 06 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/42fc9989-f8ed-4987-a1c0-20a46e57b7ae">
+
+**Notes**
+
+<img width="556" alt="Screenshot 2023-10-08 at 7 06 45 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/704f6606-b767-44a1-9063-6b7b65f9b976">
+
+#### Decision rule
+
+<img width="487" alt="Screenshot 2023-10-08 at 7 36 00 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/c919f24a-280e-4d4b-99e0-6aa694d6a3ac">
+
+**Notes**
+
+Conduct the test for interaction fisrt:
+
+* If interaction is not significant, the tests on the main effects is meaningful.
+
+* If interaction is significant, the main effects of the factors is not needed.
+
+(The combined effect cannot be explained by their individual main effects alone,  hence testing the main effects separately may not provide a complete understanding of the factors' influence on the dependent variable.)
+
+## Multiple Comparisons
+
+When the is no interaction, Fisher's LSD method can be used to identify significant differences in levels.
+
+## Residual Analysis
+
+For two-factor model, <img width="156" alt="Screenshot 2023-10-08 at 7 59 37 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/d37f2765-bf00-438b-a6e5-c523ed1e0710">
+
+**1. Normality Check:** 
+   - normal probability plot of the residuals
+
+**2. Equal Variances Check:**
+   - plot residuals vs. fitted value(<img width="20" alt="Screenshot 2023-10-08 at 8 14 39 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/76387170-35d0-43c4-bb97-f0ea975e004e">). If standardized residuals > 2, it could likely be outliers.
+   - Plot of residuals versus Factor A
+   - Plot of residuals versus Factor B
+
+
+**3. Independence Check:** 
+   - plot residuals vs. time
+   - plot residuals vs. run order
+
+### One Observation per Cell
 
