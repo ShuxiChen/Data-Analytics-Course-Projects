@@ -27,8 +27,8 @@ ANOVA is more robust by considering the overall pattern of group means.
 
 #### Two sources of variability
 
-1. variation among observations within treatments (within-sample variation = unexplained variation), which is random variation
-2. variation due to treatments (between-sample variation = explained variation)
+1. Variation among observations within treatments (within-sample variation = unexplained variation), which is random variation
+2. Variation due to treatments (between-sample variation = explained variation)
 
 ## Designing Engineering Experiments(1)
 
