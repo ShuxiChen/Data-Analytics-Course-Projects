@@ -30,7 +30,7 @@ ANOVA is more robust by considering the overall pattern of group means.
 1. variation among observations within treatments (within-sample variation = unexplained variation), which is random variation
 2. variation due to treatments (between-sample variation = explained variation)
 
-## Designing Engineering Experiments
+## Designing Engineering Experiments(1)
 
 ### CRD (Completely Randomized Single-Factor Experiment)
 
@@ -199,3 +199,139 @@ For the CRD, <img width="147" alt="Screenshot 2023-10-07 at 9 20 10 PM" src="htt
    2) plot the residuals against<img width="44" alt="Screenshot 2023-10-07 at 9 18 01 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/f8e3811f-534e-4dcb-a035-a43d0b154811">
 
 **3. Independence Check:** plot the residuals against the time or run order in which the experiment was performed
+
+## Designing Engineering Experiments(2)
+
+### RCBD (Randomized Complete Block Design)
+
+CRD can balance out random variability, but if there are "known factors" that could have a significant on experimental results, then RCBD is a suitable experimental design to address the issue and reduce SSE.
+
+#### Terminology
+
+* interest factor: the factor we are interested to experiment.
+* nuisance factor: the factor we are not interested, probably has an effect on the response.
+* blocking: a technique addressing the nuisance source of variability when it **is known and controllable**.
+* blocks: homogeneous groupings of experimental units created after blocking.
+
+Blocking reduces experimental errors, because **the units in blocks have characteristics that are more common than units that are in different blocks**.
+
+#### Scenario
+
+There are four drugs to reduce weight. Sampling 12 observations to conduct an balanced experiment.
+
+#### Hypothesis
+
+H0: The mean weight reduction of all four drugs is equal.
+
+H1: At least one drug has a different mean weight reduction.
+
+#### Experiment
+
+* Since the variation of age is sensitivity of detecting drugs differences, consider age as a known and controllable nuisance factor.
+* Divide participants into 3 blocks Old, Middle, and Young age groups.
+* Four participants from each age group are randomly assigned to each drug.
+
+<img width="325" alt="Screenshot 2023-10-07 at 10 14 35 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/40fdaae3-5281-4625-8d59-9ae1d236e6ff">
+
+#### Analysis
+
+* Perform two-way ANOVA.
+* Examine drug **main effects** and **interactions** with age.
+
+#### Conclusion
+
+* If reject H0, it suggests that there are statistically significant differences in the mean weight reduction among the drug groups.
+* Blocking by age eliminates age-related confounds for more accurate conclusions.
+
+--------------------
+
+#### Data stucture
+
+<img width="362" alt="Screenshot 2023-10-07 at 11 08 52 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/15421735-16de-498a-a34c-fb756bd2a1c4">
+
+<img width="600" alt="Screenshot 2023-10-07 at 11 06 21 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/a53063cc-2d8c-4a36-a48f-e172ddf7110d">
+
+#### Linear Model
+
+<img width="537" alt="Screenshot 2023-10-07 at 11 08 35 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/1ad5008c-8517-43fa-a87b-0eaafe289467">
+
+**Notes**
+
+RCBD model assumes that the variation comes from between-sample variation, within-sample variation, and the effect of the block (nuisance factor). 
+
+#### Hypotheses
+
+1. H0: μ1 = μ2 = ... = μa vs. H1: At least two of the μi's are different
+
+   or
+
+2. H0: τ1 = τ2 = ... = τa = 0 vs. H1: At least one of the τi's is different from zero 
+
+#### Test Statistic
+
+<img width="470" alt="Screenshot 2023-10-07 at 11 39 11 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/6130c7b7-5d87-478f-a7e1-6a6904fd6a15">
+
+<img width="429" alt="Screenshot 2023-10-07 at 11 39 40 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/02c0e3af-76a8-4b57-b4b0-8d921b6727fb">
+
+<img width="231" alt="Screenshot 2023-10-07 at 11 40 01 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/28118437-d3b5-4050-a2b4-954120d6ccf5">
+
+#### ANOVA table
+
+<img width="604" alt="Screenshot 2023-10-07 at 11 40 36 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/f826293f-7569-43e8-89a7-bde20483b2bc">
+
+**Notes**
+
+Expected mean squares
+
+<img width="533" alt="Screenshot 2023-10-07 at 11 41 09 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/cddadabd-acf8-4042-8323-0232d2f3d2f7">
+
+#### Decision Rules
+
+1. F statistics method
+
+   (same procedure)
+   
+2. P-value method
+
+   (same procedure)
+   
+3. Confidence interval estimate method
+
+   (same procedure)
+
+**Notes: The SSE should be smaller in experiments following RCBD than in CRD.**
+
+## Multiple Comparisons
+
+### Fisher’s least significant difference (LSD)
+
+#### Hypotheses
+
+(same procedure)
+
+#### Test Statistic
+
+(same procedure)
+
+#### Interpretation of Results
+
+(same procedure)
+
+## Residual Analysis
+
+Check the three assumptions by examining the residuals.
+
+For the RCBD, <img width="152" alt="Screenshot 2023-10-08 at 2 10 24 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/c67fb20b-6c7b-4b76-92df-5bcf1d858e82">, and each residual is <img width="213" alt="Screenshot 2023-10-08 at 2 11 08 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/41054d84-63a2-448f-b8d9-cc2029ebb853">
+
+
+**1. Normality Check:** normal probability plot of the residuals
+
+**2. Equal Variances Check:**
+   1) plot residuals by treatment
+   2) plot residuals vs. fitted value(<img width="24" alt="Screenshot 2023-10-08 at 2 26 50 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/c79683b6-f0e5-4141-b231-336c1c8c8c31">)
+
+
+**3. Independence Check:** 
+   1) plot residuals by block
+   2) plot residuals vs. time
+   3) plot residuals vs. run order
