@@ -96,9 +96,9 @@ For two-factor model, <img width="120" alt="Screenshot 2023-10-08 at 7 59 37 PM"
    - normal probability plot of the residuals
 
 **2. Equal Variances Check:**
-   - plot residuals() vs. fitted value(<img width="20" alt="Screenshot 2023-10-08 at 8 14 39 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/76387170-35d0-43c4-bb97-f0ea975e004e">).
+   - plot residuals vs. fitted value(<img width="20" alt="Screenshot 2023-10-08 at 8 14 39 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/76387170-35d0-43c4-bb97-f0ea975e004e">).
 
-(plot of standardized residuals vs. fitted value can identify outliers if > 2)
+     (plot of standardized residuals vs. fitted value can identify outliers if > 2)
 
    - plot residuals vs. Factor A
    - plot residuals vs. Factor B
