@@ -34,11 +34,7 @@ This is the simplest type of factorial experiment, Analyzing data with two categ
 
 #### Linear Model
 
-<img width="640" alt="Screenshot 2023-10-08 at 4 44 59 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/d1187314-e0c8-43d0-b5f1-e70296330887">
-
-**Notes**
-
-This model assumes that the variation comes from between-sample variation, within-sample variation, and the effect of the block (nuisance factor).
+<img width="500" alt="Screenshot 2023-10-08 at 4 44 59 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/d1187314-e0c8-43d0-b5f1-e70296330887">
 
 #### Hypotheses
 
@@ -62,9 +58,9 @@ This model assumes that the variation comes from between-sample variation, withi
 
 #### Test Statistic
 
-<img width="602" alt="Screenshot 2023-10-08 at 7 05 13 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/0606568d-0f79-4a48-8b9a-77888c94f3c5">
+<img width="500" alt="Screenshot 2023-10-08 at 7 05 13 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/0606568d-0f79-4a48-8b9a-77888c94f3c5">
 
-<img width="673" alt="Screenshot 2023-10-08 at 7 05 45 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/b4da6aeb-c103-4fb1-ba2a-0f544b7bd699">
+<img width="460" alt="Screenshot 2023-10-08 at 7 05 45 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/b4da6aeb-c103-4fb1-ba2a-0f544b7bd699">
 
 #### ANOVA table
 
@@ -72,7 +68,7 @@ This model assumes that the variation comes from between-sample variation, withi
 
 **Notes**
 
-<img width="556" alt="Screenshot 2023-10-08 at 7 06 45 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/704f6606-b767-44a1-9063-6b7b65f9b976">
+<img width="400" alt="Screenshot 2023-10-08 at 7 06 45 PM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/704f6606-b767-44a1-9063-6b7b65f9b976">
 
 #### Decision rule
 
@@ -111,7 +107,7 @@ For two-factor model, <img width="120" alt="Screenshot 2023-10-08 at 7 59 37 PM"
    - plot residuals vs. time
    - plot residuals vs. run order
 
-### One Observation per Cell
+## One Observation per Cell
 
 If there is only one replicate per cell, it will have no error degrees of freedom, making it impossible to conduct hypothesis tests.
 
