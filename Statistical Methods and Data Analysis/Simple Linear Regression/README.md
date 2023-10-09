@@ -123,11 +123,13 @@ Is the regression is significant(Is there a linear relationship between x and Y)
 
 <img width="639" alt="Screenshot 2023-10-09 at 11 40 27 AM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/904bd247-2665-43cb-99b9-621c9794254f">
 
-## Confidence Intervals
+## Interval Estimation
+
+### Confidence Intervals
 
 It provides a range of values where we can reasonably expect the true parameter to lie.
 
-### C.I. on <img width="40" alt="Screenshot 2023-10-09 at 9 42 37 AM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/1199a6b6-9382-48df-b5c0-9588ed9ec90c">
+#### C.I. on <img width="40" alt="Screenshot 2023-10-09 at 9 42 37 AM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/1199a6b6-9382-48df-b5c0-9588ed9ec90c">
 
 Under the "normality assumption" of observations:
 
@@ -139,7 +141,7 @@ Under the "normality assumption" of observations:
 
   <img width="500" alt="Screenshot 2023-10-09 at 11 50 24 AM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/1474acab-d335-4703-8941-3de4b8b834d7">
 
-### C.I. on regression line <img width="85" alt="Screenshot 2023-10-09 at 9 43 03 AM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/76027620-a3e0-4b7d-b68f-af308c73e156">
+#### C.I. on regression line <img width="85" alt="Screenshot 2023-10-09 at 9 43 03 AM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/76027620-a3e0-4b7d-b68f-af308c73e156">
 
 * 100(1 - α)% C.I. for <img width="20" alt="Screenshot 2023-10-09 at 11 55 00 AM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/337c272d-a5ab-4a15-a3ce-82ca20b9ead3">(<img width="40" alt="Screenshot 2023-10-09 at 11 56 24 AM" src="https://github.com/ShuxiChen/Data-Analytics-Course-Projects/assets/146168006/52ca0f4f-260d-4b08-97a1-bcd03f9e3b96">)
 
@@ -150,13 +152,13 @@ Under the "normality assumption" of observations:
 1. The interval width is a minimum for x0 = x̄.
 2. The interval width increases as |x0 - x̄| increases.
 
-### Interpretation
+#### Interpretation
 
 "We are 100(1 - α)% confident that the true parameter falls between A and B."
 
 -> If we were to take many random samples and calculate confidence intervals in the same way, we would expect approximately 100(1 - α)% of those intervals to contain the true population parameter.
 
-## Prediction of future observations
+### Prediction of future observations
 
 It provides a range where we can expect a new data point to fall with a certain level of confidence.
 
